@@ -10,14 +10,12 @@ import java.util.*;
  
 public class FindDuplicateAssetBinaries {
     public static void main(String[] args) throws Exception{
-       //String REPO = "http://localhost:4502/crx/server";
-    	 String SIT_REPO = "http://10.38.3.12:4502/crx/server";
+       String REPO = "http://localhost:4502/crx/server";
         String WORKSPACE = "crx.default";
  
         Repository repository = JcrUtils.getRepository(SIT_REPO);
- 
-        Session session = repository.login(new SimpleCredentials("admin", "AwsAuth0r@sit".toCharArray()));
-        //Session session = repository.login(new SimpleCredentials("admin", "admin".toCharArray()));
+
+        Session session = repository.login(new SimpleCredentials("admin", "admin".toCharArray()));
         QueryManager qm = session.getWorkspace().getQueryManager();
  
         //String stmt = "SELECT  * FROM [dam:Asset] WHERE ISDESCENDANTNODE(\"/content/dam\") ORDER BY 'jcr:content/metadata/dam:sha1'";
@@ -69,7 +67,7 @@ public class FindDuplicateAssetBinaries {
         String[] dupPaths = null;
  
         System.out.println("--------------------------------------------------------------------");
-        System.out.println("Duplicate Binaries in Repository - " + SIT_REPO);
+        System.out.println("Duplicate Binaries in Repository - " + REPO);
         System.out.println("--------------------------------------------------------------------");
  
         for(Map.Entry entry : duplicates.entrySet()){
