@@ -13,7 +13,7 @@ public class FindDuplicateAssetBinaries {
        String REPO = "http://localhost:4502/crx/server";
         String WORKSPACE = "crx.default";
  
-        Repository repository = JcrUtils.getRepository(SIT_REPO);
+        Repository repository = JcrUtils.getRepository(REPO);
 
         Session session = repository.login(new SimpleCredentials("admin", "admin".toCharArray()));
         QueryManager qm = session.getWorkspace().getQueryManager();
