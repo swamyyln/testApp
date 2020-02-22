@@ -1,0 +1,58 @@
+Jquery is a subset of java script.
+Jquery is used to apply actions on html dom elements.
+
+
+latest version is : V1.12.4
+
+Jquery uses HTML tags to select HTML elements
+
+--------------------------------------------------------------------
+
+elements selectors
+$("p") => select all <p> elements
+$("a") =>select all <a> elements
+$("ul") =>select all <ul> elements
+$("*") =>select all elelemnts with in the DOM structure.
+$("img","span") =>select all image tags and span tags
+
+-------------------------------------------------------------------
+
+CSS selectors
+
+$("#intro") =>selects all dom elements with CSS id =intro
+$("a#intro") =>selects all <a> tags with id =intro
+$("a#intro.myClass") =>selects all <a> tags with id=intro and class=myclass
+------------------------------------------------------------------------------
+attribute selectors
+
+$("input[type=text]") =>find an input element with type=text
+
+$("[href]") =>select all elements with href attribute 
+
+--------------------------------------------------------------------------
+Advanced selectors
+
+$("*") => select all elements with in DOM
+
+$("p>*") => select all elements with in inside <p> element
+
+$(li:not(.mycls)) => selects all li elements that are not having class=mycls
+
+$("p:empty") => select all <p> tags with no children under <p>
+
+$(":radio") => selects all radio buttons in the form
+
+$(":checked") => select all checked boxes
+
+$("[href!='#']")=>select all href Not equals #
+
+$("[href$='.pdf']") =>select all href ending with .pdf extensions
+
+$("[href^='https://']") => select all href with starting https://
+
+----------------------------------------------------------------------
+some use full jquery styling
+
+$("li:first").css("background-color","66f"); change first list item to different color
+
+$("tr:nth-child(even)").css("background-color",'coral'); chnage all even table rows in to different color specified
