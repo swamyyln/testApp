@@ -1,4 +1,7 @@
-Jquery is a subset of java script.
+
+ use jsbin.com to verify code syntax output at runtime ,this is an online tool of jquery html css
+ 
+ Jquery is a subset of java script.
 Jquery is used to apply actions on html dom elements.
 
 
